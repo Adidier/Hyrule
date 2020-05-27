@@ -1,12 +1,19 @@
-#pragma once
+
 #include "GameObject.h"
-#include "SDL.h"
-class Player :	public GameObject
+class Player : public GameObject
 {
-	public:
-		Player(int _x, int _y, int _w, int _h);
-		void Input(int dir);
-		void Draw(SDL_Renderer* renderer);
-		void Update();
-};
+protected:
+	int speed;
+	int health;
+	int currentAttack;
+	int forwardVector;
+public:
+	void Walk();
+	void Attack();
+	void Run();
+	void TakeItem();
+	int GetHealth();
+	void SetHealth(int h);
+};  
+
 

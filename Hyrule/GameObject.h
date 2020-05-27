@@ -1,13 +1,11 @@
-#pragma once
 
 class GameObject
 {
-	protected:
-		int x;
-		int y;
-		int w, h;
-	public:
-		void Draw();
-		void Update();
+protected:
+	int xPos;
+	int yPos;
+	//posicion
+	int xScale;
+	int yScale;
+	//escala
 };
-
