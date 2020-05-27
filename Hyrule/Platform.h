@@ -1,5 +1,6 @@
 #pragma once
 #include "SDL.h"
+#include "Image.h"
 #include <string>
 
 class Platform
@@ -21,6 +22,8 @@ public:
 	void RenderClear();
 	void RenderPresent();
 	void Input(bool& quit);
+	SDL_Renderer* GetRenderer();
+	void RenderTexture(Image* tex, int x, int y);
 	
 };
 

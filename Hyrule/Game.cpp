@@ -3,12 +3,14 @@
 
 void Game::Init()
 {
-
+	p1 = new Player();
+	p1->Init("../Hyrule/Assets/Player1/Player1.png");
 }
 
 void Game::Draw()
 {
-	std::cout << "estoy en Draw de game" << std::endl;
+	p1->Draw();
+	std::cout << "estoy en Draw de game " << std::endl;
 }
 
 void Game::Close()

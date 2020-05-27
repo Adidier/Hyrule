@@ -1,8 +1,12 @@
 #pragma once
 #include "GameState.h"
-class Game :
-	public GameState
+#include "Player.h"
+
+class Game : public GameState
 {
+private:
+	Player *p1;
+public:
 	void Init() override;
 	void Draw() override;
 	void Update() override;

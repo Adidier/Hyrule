@@ -99,3 +99,17 @@ void Platform::Input(bool& quit)
 		}
 	}
 }
+
+SDL_Renderer* Platform::GetRenderer()
+{
+	return gRenderer;
+}
+
+void Platform::RenderTexture(Image* tex, int x, int y)
+{
+	SDL_Rect dst;
+	dst.x = x;
+	dst.y = y;
+	SDL_QueryTexture(tex->GetTexture(), NULL, NULL, &dst.w, &dst.h);
+	SDL_RenderCopy(gRenderer, tex->GetTexture(), NULL, &dst);
+}

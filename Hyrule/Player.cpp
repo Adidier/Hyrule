@@ -1,4 +1,5 @@
 #include "Player.h"
+#include "Platform.h"
 
 void Player::Walk()
 {
@@ -23,4 +24,15 @@ int	Player::GetHealth()
 void Player::SetHealth(int h)
 {
 
+}
+void Player::Init(std::string pathImage)
+{
+	img = new Image();
+	img->LoadImage(pathImage);
+}
+
+void Player::Draw()
+{
+	Platform::GetPtr()->RenderTexture(img, xPos, yPos);
+	xPos++;
 }

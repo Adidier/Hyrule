@@ -17,8 +17,8 @@ int main(int argc, char* args[])
 {
 
 	GameStateManager manager;
-	GameState* menu = new Menu();
-	manager.SetState(menu);
+	GameState* game = new Game();
+	manager.SetState(game);
 	manager.GameLoop();
 	return 0;
 }
