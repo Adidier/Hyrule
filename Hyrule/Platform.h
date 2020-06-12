@@ -1,6 +1,7 @@
 #pragma once
 #include "SDL.h"
 #include "Image.h"
+#include "GameState.h"
 #include <string>
 
 class Platform
@@ -21,7 +22,7 @@ public:
 	void Close();
 	void RenderClear();
 	void RenderPresent();
-	void Input(bool& quit);
+	void Input(GameState* obj, bool (GameState::* f)(int));
 	SDL_Renderer* GetRenderer();
 	void RenderTexture(Image* tex, int x, int y);
 	

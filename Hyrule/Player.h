@@ -10,9 +10,10 @@ protected:
 	int forwardVector;
 	Image* img;
 public:
+	Player(int positionX, int positionY);
 	void Init(std::string pathImage);
 	void Draw();
-	void Walk();
+	void Walk(int x,int y);
 	void Attack();
 	void Run();
 	void TakeItem();

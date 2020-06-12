@@ -21,8 +21,7 @@ void GameStateManager::GameLoop()
 		{
 			break;
 		}
-		plat->Input(closeApp);
-		gamestates.top()->Input(0);
+		plat->Input(gamestates.top(), &GameState::Input);
 		gamestates.top()->Update();
 		plat->RenderClear();
 		gamestates.top()->Draw();
@@ -33,7 +32,7 @@ void GameStateManager::GameLoop()
 GameStateManager::GameStateManager()
 {
 	plat = Platform::GetPtr();
-	plat->Init(640,480);
+	plat->Init(512,384);
 }
 
 GameStateManager::~GameStateManager()

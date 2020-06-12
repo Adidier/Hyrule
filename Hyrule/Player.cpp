@@ -1,9 +1,10 @@
 #include "Player.h"
 #include "Platform.h"
 
-void Player::Walk()
+void Player::Walk(int x, int y)
 {
-
+	xPos += x;
+	yPos += y;
 }
 void Player::Attack()
 {
@@ -34,5 +35,10 @@ void Player::Init(std::string pathImage)
 void Player::Draw()
 {
 	Platform::GetPtr()->RenderTexture(img, xPos, yPos);
-	xPos++;
+}
+
+Player::Player(int positionX, int positionY)
+{
+	xPos = positionX;
+	yPos = positionY;
 }

@@ -12,10 +12,10 @@
 #include "Menu.h"
 #include "Game.h"
 #include "Platform.h"
+#include <iostream>
 
 int main(int argc, char* args[])
 {
-
 	GameStateManager manager;
 	GameState* game = new Game();
 	manager.SetState(game);

@@ -21,7 +21,8 @@ void Menu::Update()
 	std::cout << "estoy en Update de menu" << std::endl;
 }
 
-void Menu::Input(int key)
+bool Menu::Input(int key)
 {
 	std::cout << "estoy en input de menu"<<std::endl;
+	return true;
 }
