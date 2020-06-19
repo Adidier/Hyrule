@@ -1,11 +1,18 @@
 #pragma once
 #include "Tile.h"
-class Enemy : public Tile
+class Enemy 
 {
-public:
+protected:
+	Tile tile;
 	int attack;
 	int movePattern;
-
-	Enemy(int attack,int movePattern,int type, int x, int y, int w, int h, std::string path, int resistance = 1);
+	int xPosInit;
+	int yPosInit;
+	const int maxMove{ 20 };
+	int dir;
+public:
+	Enemy(Tile t);
+	void Draw();
+	virtual void Update();
 };
 

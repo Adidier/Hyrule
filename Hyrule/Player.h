@@ -1,5 +1,6 @@
 #include "Image.h"
 #include "GameObject.h"
+#include "Map.h"
 #include <string>
 class Player : public GameObject
 {
@@ -16,6 +17,7 @@ public:
 	void Walk(int x,int y);
 	void Attack();
 	void Run();
+	bool CheckCollision(int x, int y, Map& map);
 	void TakeItem();
 	int GetHealth();
 	void SetHealth(int h);

@@ -26,6 +26,7 @@ void GameStateManager::GameLoop()
 		plat->RenderClear();
 		gamestates.top()->Draw();
 		plat->RenderPresent();
+		SDL_Delay(10);
 	}
 }
 

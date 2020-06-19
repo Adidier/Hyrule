@@ -6,6 +6,18 @@ void Player::Walk(int x, int y)
 	xPos += x;
 	yPos += y;
 }
+bool Player::CheckCollision(int x, int y, Map& map)
+{
+
+	int nextX = (xPos + x)/16;
+	int nextY = (yPos + y)/16;
+	int temp = map.GetTypeTileByPositon(nextX, nextY);
+
+	if (temp != Map::Tiles::stoneWall) {
+		return false;
+	}
+	return true;
+}
 void Player::Attack()
 {
 

@@ -14,10 +14,14 @@ public:
 		brickWall,
 		door,
 		floor,
-		water
+		water,
+		spider1,
+		spider2,
 	};
 	Map() {};
 	void Init(std::map<int, Tile>, std::string path);
+	int GetTypeTileByPositon(int x, int y);
+	std::vector<Tile> GetTilesType(int type);
 	void Draw();
 	int GetType();
 private:
