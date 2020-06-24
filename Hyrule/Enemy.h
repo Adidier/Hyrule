@@ -11,6 +11,8 @@ protected:
 	const int maxMove{ 20 };
 	int dir;
 public:
+	int GetxPos();
+	int GetyPos();
 	Enemy(Tile t);
 	void Draw();
 	virtual void Update();

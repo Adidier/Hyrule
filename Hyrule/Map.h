@@ -10,10 +10,11 @@ public:
 	enum Tiles
 	{
 		free,
+		floor,
 		stoneWall,
 		brickWall,
-		door,
-		floor,
+		TEST,
+		door,		
 		water,
 		spider1,
 		spider2,

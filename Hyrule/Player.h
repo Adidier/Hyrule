@@ -17,10 +17,13 @@ public:
 	void Walk(int x,int y);
 	void Attack();
 	void Run();
-	bool CheckCollision(int x, int y, Map& map);
+	bool CheckCollision(int x, int y, int typeTile, Map& map);
+	int GetTileFromMatrix(int x, int y, int cornerX, int cornerY, Map& map);
 	void TakeItem();
 	int GetHealth();
 	void SetHealth(int h);
+	int GetW();
+	int GetH();
 };  
 
 

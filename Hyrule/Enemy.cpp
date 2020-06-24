@@ -44,3 +44,14 @@ void Enemy::Update()
 		dir = 1;
 	}
 }
+
+int Enemy::GetxPos()
+{
+	return xPosInit;
+}
+
+int Enemy::GetyPos()
+{
+	return yPosInit;
+}
+

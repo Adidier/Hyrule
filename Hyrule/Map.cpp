@@ -66,7 +66,7 @@ int Map::GetType()
 int Map::GetTypeTileByPositon(int x, int y)
 {
 	int vectorPosition = y * w + x;
-	int type = map[vectorPosition - 1].GetType();
+	int type = map[vectorPosition].GetType();
 	return type;
 
 }
